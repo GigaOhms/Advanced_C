@@ -32,16 +32,15 @@ double test_strtod(char *string, char **ptr){
 }
 
 
-
 int main(){
     int val;
     double vall;
     char str[20];
     char *ptr;
-    strcpy(str, "heohello123");
-    val = test_strtod(str, &ptr);
+    strcpy(str, "hello12.3heo");
+    vall = test_strtod(str, &ptr);
     printf("chuoi: %s\n", ptr);
-    printf("val = %d", val);
+    printf("val = %f", vall);
     free(ptr);
     return 0;
 }
