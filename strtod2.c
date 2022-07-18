@@ -4,7 +4,7 @@ int is_digit(int c) {
     return c >= '0' && c <= '9'; 
 }
 
-double my_stod(const char* s, const char **endptr) {
+double test_strtod(const char* s, const char **endptr) {
     while (*s && !is_digit(*s) && *s != '.')
         s++;
 
@@ -33,7 +33,7 @@ double my_stod(const char* s, const char **endptr) {
 int main(void) {
     char str[] = "abc123.4ssdd";
     char* next;
-    double v1 = my_stod(str, &next);
+    double v1 = strtod(str, &next);
     // double v2 = my_stod(next, NULL);
 
     printf("v1 = %lf\n", v1);
