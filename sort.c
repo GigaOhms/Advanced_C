@@ -47,3 +47,9 @@ void bubbleSort2(int a[], int n){
             if (a[j] > a[j+1])
                 swap(&a[j], &a[j+1]);
 }
+
+void show(int a[], int n){
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+}
