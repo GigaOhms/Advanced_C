@@ -3,13 +3,9 @@
 int test_strcspn(char *a, char *b){
     int i = 0, min = -1;
     while (*b){
-        for (i = 0; *(a+i) != '\0'; i++){
-			printf("%c = %c; i = %d\n", *b, *(a+i), i);
-            if (*b == *(a + i) && (min > i || min == -1) ){
+        for (i = 0; *(a+i) != '\0'; i++)
+            if (*b == *(a + i) && (min > i || min == -1) )
                 min = i;
-				printf("min = %d\n", min);
-			}
-		}
 		b++;
 	}
     if (min == -1) return i;
