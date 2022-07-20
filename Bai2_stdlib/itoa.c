@@ -64,7 +64,7 @@ void itoa(int n, char buffer[], int base){
 	}
 }
 
-int main(){ // pull
+int main(){
     int a = 123456789;
     char buffer[100];
 	itoa(a, buffer, 16);
