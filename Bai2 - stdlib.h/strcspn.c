@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int test_strcspn(char *a, char *b){
+int strcspn_1(char *a, char *b){
     int i = 0, min = -1;
     while (*b){
         for (i = 0; *(a+i) != '\0'; i++)
@@ -12,10 +12,25 @@ int test_strcspn(char *a, char *b){
     return min;
 }
 
+int strcspn_2(const char *s1, const char *s2){
+  	const char *s = s1;
+  	const char *c;
+
+  	while (*s1){
+    	for (c = s2; *c; c++)
+			if (*s1 == *c)
+				break;
+    	if (*c)
+			break;
+      	s1++;
+    }
+  return s1 - s;
+}
+
 int main(void) {
 	char a[] = "ABCDEF4960910";
-	char b[] = "M";
-	int len = test_strcspn(a, b);
+	char b[] = "C";
+	int len = strcspn_2(a, b);
 	printf("%d\n", len);
     return 0;
 }
