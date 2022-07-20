@@ -15,7 +15,6 @@ void reverse(char *str, int length){
 
 void dec2bin(int n, char *buffer){
 	int index = 0;
-	
     if(n == 0) buffer[index++] = '0';
     while(n > 0){
         buffer[index++] = n%2 + 48;
@@ -50,7 +49,6 @@ void dec2hex(int n, char *buffer){
 	reverse(buffer, index);
 	buffer[index] = '\0';
 }
-
 
 void itoa(int n, char buffer[], int base){
 	switch (base){
