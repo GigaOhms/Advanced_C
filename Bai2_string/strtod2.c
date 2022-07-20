@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
 
 double test_strtod(char *string, char **ptr){
     int j = 0;
@@ -33,14 +31,11 @@ double test_strtod(char *string, char **ptr){
 
 
 int main(){
-    int val;
-    double vall;
-    char str[20];
+    char str[20]; = "hello12.3heo";
     char *ptr;
-    strcpy(str, "hello12.3heo");
-    vall = test_strtod(str, &ptr);
+    double val = test_strtod(str, &ptr);
     printf("chuoi: %s\n", ptr);
-    printf("val = %f", vall);
+    printf("val = %f\n", val);
     free(ptr);
     return 0;
 }

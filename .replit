@@ -1,6 +1,5 @@
-compile = ["make", "-s"]
-run = "./main"
-entrypoint = "main.c"
+compile = "make -s"
+run = "sh -c ./main"
 hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
 
 [languages.c]
