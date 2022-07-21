@@ -50,7 +50,6 @@ char *__strtok_rr (char *s, const char *delim, char **save_ptr){
     	*save_ptr = end;
     	return s;
     }
-	/* Terminate the token and make *SAVE_PTR point past it.  */
 	*end = '\0';
 	*save_ptr = end + 1;
 	return s;
