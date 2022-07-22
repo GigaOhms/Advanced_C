@@ -33,7 +33,7 @@ int strspn_t(const char *s1, const char *s2) {
 char *strtok_t(char *s, const char *delim) {
 	static char *old;
 	char *end;
-	if (s == NULL) 
+	if (s == NULL)
 		s = old;
 	if (*s == 0) {
 		old = s;
