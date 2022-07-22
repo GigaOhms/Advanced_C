@@ -29,7 +29,7 @@ int strcspn_2(const char *s1, const char *s2){
 
 int main(void) {
 	char a[] = "ABCDEF4960910";
-	char b[] = "C";
+	char b[] = "CB";
 	int len = strcspn_2(a, b);
 	printf("%d\n", len);
     return 0;

@@ -9,8 +9,7 @@ double strtod_t(const char* s, const char **endptr) {
         s++;
 
     double n = 0.0;
-    while(*s && is_digit(*s))
-    {
+    while(*s && is_digit(*s)){
         n = n * 10.0 + ((*s) - '0');
         s++;
     }
