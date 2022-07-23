@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 struct List {
 	int data;
 	struct List *next;
@@ -80,11 +81,20 @@ void ChangeValue(Vector note, int index, int value) {
 	p->data = value;
 }
 
+void Show(Vector node) {
+	while (node != NULL) {
+		printf("%d ", node->data);
+		node = node->next;
+	}
+	printf("\n");
+}
+
 int main() {
 	Vector vt = Input();
 	ChangeValue(vt, 4, 10);
 	int a = Pop(vt);
 	Push_Back(vt, 5);
-	printf("data: %d - pop = %d", Get(vt, 4), a);
+	printf("data: %d - pop = %d\n", Get(vt, 4), a);
+	Show(vt);
 	return 0;
 }
