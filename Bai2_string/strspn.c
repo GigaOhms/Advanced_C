@@ -17,7 +17,7 @@ int strspn_t(const char *s1,	const char *s2){
 
 int main(void) {
 	char a[] = "ABCDEF4960910";
-	char b[] = "4";
+	char b[] = "AAAB";
 	int len = strspn_t(a, b);
 	printf("%d\n", len);
     return 0;
